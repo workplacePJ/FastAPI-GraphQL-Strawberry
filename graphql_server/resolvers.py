@@ -14,7 +14,6 @@ class QueryResolver:
             if pagination is not None:
                 query = query.offset(pagination.offset).limit(pagination.limit)
             tasks = query.all()
-            
         finally:
             db.close()
             
